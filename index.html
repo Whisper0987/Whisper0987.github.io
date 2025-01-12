@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космические Перелёты</title>
+    <!-- Подключение Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <!-- Собственный CSS -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translate(-50%, -50%);
+        }
+        .navbar-custom {
+            background-color: rgba(0, 0, 0, 0.7)!important;
+        }
+        .nav-link {
+            color: #fff!important;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #ffb700!important;
+        }
+        .jumbotron {
+            background-color: transparent;
+            text-align: center;
+            margin-top: 150px;
+        }
+        .jumbotron h1 {
+            color: #ffb700;
+            font-size: 60px;
+        }
+        .form-control {
+            background-color: rgba(255, 183, 0, 0.2);
+            border: none;
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #ffb700;
+            border-color: #ffb700;
+        }
+        .btn-primary:hover {
+            background-color: #ffa500;
+            border-color: #ffa500;
+        }
+        .news-container {
+            padding: 80px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: none;
+        }
+        .card-title {
+            color: #ffb700;
+        }
+        .card-text {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Космические Перелёты</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="destinations.html">Пункты Назначения</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="space-map.html">Карта Космоса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">О Нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Фоновое видео -->
+    <video autoplay muted loop class="bg-video">
+        <source src="space-video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Джамботрон -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Добро пожаловать на борт!</h1>
+            <p class="lead">Откройте для себя Вселенную вместе с нами.</p>
+            <hr class="my-4">
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Откуда" required>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" required>
+                        <option selected disabled value="">Выберите пункт назначения</option>
+                        <option value="mars">Марс</option>
+                        <option value="moon">Луна</option>
+                        <option value="saturn">Сатурн</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Забронировать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Новости -->
+    <section class="news-container">
+        <div class="container">
+            <h2 class="text-center mb-4">Последние новости</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="photo_5_2025-01-12_19-47-43.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Новая миссия на Марс</h5>
+                            <p class="card-text">Описание новой миссии на Марс и достижения компании.</p>
+                            <a href="#" class="btn btn-primary">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="photo_3_2025-01-12_19-47-43.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Специальное предложение</h5>
+                            <p class="card-text">Узнайте о нашем новом специальном предложении для путешествий на Луну.</p>
+                            <a href="#" class="btn btn-primary">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="photo_8_2025-01-12_19-47-43.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Интервью с командиром экипажа</h5>
+                            <p class="card-text">Эксклюзивное интервью с командиром нашего последнего рейса на Сатурн.</p>
+                            <a href="#" class="btn btn-primary">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-black text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Компания</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about-us.html" class="text-decoration-none text-reset">О нас</a></li>
+                        <li><a href="team.html" class="text-decoration-none text-reset">Наша команда</a></li>
+                        <li><a href="careers.html" class="text-decoration-none text-reset">Карьера</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Полезные ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-decoration-none text-reset">Условия использования</a></li>
+                        <li><a href="privacy.html" class="text-decoration-none text-reset">Политика конфиденциальности</a></li>
+                        <li><a href="faq.html" class="text-decoration-none text-reset">Часто задаваемые вопросы</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Подписывайтесь на нас</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-reset"><i class="bi bi-twitter"></i> Twitter</a></li>
+                        <li><a href="#" class="text-decoration-none text-reset"><i class="bi bi-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-decoration-none text-reset"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">© 2023 Космические Перелёты. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
